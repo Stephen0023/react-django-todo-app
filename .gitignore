@@ -1,0 +1,28 @@
+# Ignore virtual environment
+venv/
+
+# Ignore node_modules in frontend (if using Node.js)
+frontend/node_modules/
+
+# Ignore build artifacts in frontend (if using build tools like webpack, babel, etc.)
+frontend/build/
+frontend/dist/
+
+# Ignore IDE or editor-specific files (example for VSCode)
+.vscode/
+
+# Ignore SQLite database file in backend (if using Django with SQLite)
+backend/db.sqlite3
+
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore logs and other runtime data
+*.log
+*.pid
+*.pyo
+
+# Ignore any sensitive or environment-specific files (e.g., .env files)
+.env
+
+# Ignore any other generated files or directories not necessary for version control
