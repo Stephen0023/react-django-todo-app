@@ -84,7 +84,10 @@ export default function UserContextProvider({
           done: task.completed, // Default value or transform based on your needs
           pinned: false, // Default value or transform based on your needs
           color: "#88c9f2", // Default value or transform based on your needs
-          date: new Date(task.date),
+          date:
+            task.created_at !== undefined
+              ? new Date(task.created_at)
+              : new Date(task.date),
           deadline: task.deadline ? new Date(task.deadline) : undefined,
         }));
         console.log(tasks);

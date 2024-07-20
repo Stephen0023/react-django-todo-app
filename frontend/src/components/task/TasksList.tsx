@@ -449,29 +449,8 @@ export const TasksList: React.FC = () => {
                   }}
                 />
               )}
-              {/* {task.emoji || task.done ? (
-                <EmojiContainer
-                  clr={getFontColor(task.color)}
-                  // onDoubleClick={() => handleSelectTask(task.id)}
-                >
-                  {task.done ? (
-                    <DoneRounded fontSize="large" />
-                  ) : (
-                    <Emoji
-                      size={46}
-                      unified={task.emoji || ""}
-                      emojiStyle={EmojiStyle.APPLE}
-                      lazyLoad
-                    />
-                  )}
-                </EmojiContainer>
-              ) : null} */}
+
               <TaskInfo translate="no">
-                {task.pinned && (
-                  <Pinned translate="yes">
-                    <PushPinRounded fontSize="small" /> &nbsp; Pinned
-                  </Pinned>
-                )}
                 <TaskHeader>
                   <TaskName done={task.done}>
                     {highlightMatchingText(task.name)}
@@ -520,23 +499,8 @@ export const TasksList: React.FC = () => {
                     </TimeLeft>
                   </Tooltip>
                 )}
-                {task.sharedBy && (
-                  <div
-                    translate="yes"
-                    style={{
-                      opacity: 0.8,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "4px",
-                    }}
-                  >
-                    <Link /> Shared by{" "}
-                    <span translate={task.sharedBy === "User" ? "yes" : "no"}>
-                      {task.sharedBy}
-                    </span>
-                  </div>
-                )}
-                <div
+
+                {/* <div
                   style={{
                     display: "flex",
                     flexWrap: "wrap",
@@ -545,7 +509,7 @@ export const TasksList: React.FC = () => {
                     alignItems: "center",
                   }}
                 >
-                  {/* {task.category &&
+                  {task.category &&
                     task.category.map((category) => (
                       <div key={category.id}>
                         <CategoryBadge
@@ -553,8 +517,8 @@ export const TasksList: React.FC = () => {
                           borderclr={getFontColor(task.color)}
                         />
                       </div>
-                    ))} */}
-                </div>
+                    ))}
+                </div> */}
               </TaskInfo>
               <IconButton
                 aria-label="Task Menu"

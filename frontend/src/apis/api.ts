@@ -2,7 +2,7 @@ import axios from "axios";
 import { UUID } from "../types/User";
 
 // Define the base URL for your API
-const API_URL = "http://127.0.0.1:8000/api/";
+const API_URL = "http://54.159.174.236:8000/api/";
 
 // Define the type for categories and tasks
 type Category = {
